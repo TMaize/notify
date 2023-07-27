@@ -1,20 +1,18 @@
 # notify
 
-A frame less notify component，[watch demo](xxx)
+A frame less notify component，[watch demo](https://tmaize.github.io/notify/)
 
-// TODO alert loading
+### API
 
-### usage
-
-see [index.d.ts](httxxx/src/lib/index.d.ts)
+[index.d.ts](https://github.com/TMaize/notify/blob/master/src/lib/index.d.ts)
 
 ### CDN usage
 
-| lib          | size     | gzip    | CDN           |
-| ------------ | -------- | ------- | ------------- |
-| all.umd.js   | 17.24 kB | 6.32 kB | [npmmirror]() |
-| alert.umd.js | 14.14 kB | 5.37 kB | [npmmirror]() |
-| alert.umd.js | 10.19 kB | 3.81 kB | [npmmirror]() |
+| lib            | size     | gzip    | CDN                                                                                        |
+| -------------- | -------- | ------- | ------------------------------------------------------------------------------------------ |
+| all.umd.js     | 17.24 kB | 6.32 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.1.0/files/dist/all.umd.js)     |
+| alert.umd.js   | 14.14 kB | 5.37 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.1.0/files/dist/alert.umd.js)   |
+| message.umd.js | 10.19 kB | 3.81 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.1.0/files/dist/message.umd.js) |
 
 ```html
 <script src="all.umd.js"></script>
