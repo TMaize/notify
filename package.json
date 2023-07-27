@@ -1,0 +1,38 @@
+{
+  "name": "@tmaize/notify",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/all.umd.js",
+  "module": "dist/all.es.js",
+  "types": "src/lib/index.d.ts",
+  "author": "TMaize <1772314831@qq.com>",
+  "license": "ISC",
+  "repository": "https://github.com/TMaize/notify.git",
+  "exports": {
+    ".": {
+      "require": "./dist/all.umd.js",
+      "import": "./dist/all.es.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:icon": "svg-css-icon --encode utf8 --input src/lib/style --output src/lib/style/icon.less --class n-icon",
+    "build:lib": "npm run build:icon && node build.js",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@types/node": "^20.4.5",
+    "less": "^4.1.3",
+    "svelte": "^4.0.5",
+    "svg-css-icon": "0.3.1",
+    "vite": "^4.4.5"
+  },
+  "files": [
+    "dist",
+    "src/lib/index.d.ts",
+    "README.md"
+  ]
+}

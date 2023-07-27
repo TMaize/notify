@@ -1,0 +1,64 @@
+// Don't use @import, use import in js file
+// @import '../style/icon.less';
+// @import '../style/animation.less';
+
+.n-alert {
+  &-wrap {
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    animation: n-a-fade 0.25s forwards;
+    outline: none;
+  }
+
+  position: relative;
+  width: 90%;
+  max-width: 390px;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.09);
+  animation: n-a-up 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 0;
+    i {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      color: rgb(30, 30, 30);
+    }
+  }
+
+  p {
+    line-height: normal;
+    margin: 0;
+    padding: 10px 0 20px 34px;
+    font-size: 14px;
+    color: rgb(110, 110, 110);
+    display: block;
+  }
+  footer {
+    font-size: 0;
+    text-align: right;
+  }
+}

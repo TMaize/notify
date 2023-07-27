@@ -1,0 +1,82 @@
+.n-message {
+  text-align: center;
+  transition: all 0.25s ease;
+  padding: 5px 0;
+
+  &-wrap {
+    position: fixed;
+    z-index: 10003;
+    left: 0;
+    right: 0;
+    top: 20px;
+    padding: 20px 0;
+    pointer-events: none;
+    font-size: 0;
+    overflow: hidden;
+  }
+
+  &-init {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  &-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &-leave {
+    opacity: 0;
+    margin-top: -50px; // 确保偏移的距离为内容高度，防止元素移除后抖动
+  }
+
+  main {
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dcdce0;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis; // require fontSize
+    white-space: nowrap;
+    padding: 0 20px;
+    pointer-events: auto;
+    cursor: default;
+    font-size: 14px;
+  }
+
+  .n-icon {
+    font-size: 16px;
+    color: rgb(83, 83, 83); // normal
+    margin: 11px 0;
+
+    &-success {
+      color: rgb(56, 144, 57);
+    }
+
+    &-warning {
+      color: rgb(254, 136, 0);
+    }
+
+    &-error {
+      color: rgb(202, 52, 35);
+    }
+
+    &-info {
+      color: rgb(30, 93, 210);
+    }
+
+    &-loading {
+      animation: n-a-spin 2s linear infinite;
+    }
+  }
+
+  .n-content {
+    margin-left: 8px;
+    line-height: 38px;
+    vertical-align: middle;
+    color: rgb(70, 70, 70);
+  }
+}

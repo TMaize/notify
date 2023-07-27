@@ -1,0 +1,73 @@
+.n-btn {
+  text-align: center;
+  font-size: 14px;
+  min-width: 60px;
+  line-height: normal;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  transition: background-color 0.25s;
+  color: rgb(83, 83, 83);
+  user-select: none;
+
+  & + .n-btn {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &-success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(101, 195, 102);
+
+    &:hover {
+      background-color: rgb(56, 144, 57);
+    }
+  }
+
+  &-warning {
+    color: rgb(255, 255, 255);
+    background-color: rgb(241, 154, 55);
+
+    &:hover {
+      background-color: rgb(254, 136, 0);
+    }
+  }
+
+  &-error {
+    color: rgb(255, 255, 255);
+    background-color: rgb(235, 78, 61);
+
+    &:hover {
+      background-color: rgb(202, 52, 35);
+    }
+  }
+
+  &-info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(52, 120, 246);
+
+    &:hover {
+      background-color: rgb(30, 93, 210);
+    }
+  }
+
+  &-normal {
+    color: rgb(255, 255, 255);
+    background-color: rgb(142, 142, 147);
+
+    &:hover {
+      background-color: rgb(83, 83, 83);
+    }
+  }
+
+  .n-icon-loading {
+    animation: n-a-spin 2s linear infinite;
+  }
+}
