@@ -1,6 +1,5 @@
 <script>
   import { onMount, createEventDispatcher } from 'svelte'
-  import Btn from '../btn/index.js'
 
   export let title = '提示'
   export let content = ''
@@ -16,7 +15,6 @@
   })
 
   const dispatch = createEventDispatcher()
-  // const self = get_current_component()
 
   function handleKeyDown(e) {
     if (e.key == 'Escape') {
@@ -45,15 +43,17 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div class="n-alert" on:click|stopPropagation>
     <h2>
-      <i class="n-icon n-icon-normal" />
+      <i class="n-icon n-icon-error" />
       <span>{title}</span>
     </h2>
     <p>{content}</p>
     <footer>
       {#if cancelText !== ''}
-        <Btn on:click={() => cancel('button')}>{cancelText}</Btn>
+        <button class="n-btn" on:click={() => cancel('button')}>{cancelText}</button>
       {/if}
-      <Btn on:click={() => ok()} {type} {loading}>{okText}</Btn>
+      <button class="n-btn n-btn-{type}" on:click={ok}>
+        {#if loading}<span class="n-icon n-icon-loading" />{:else}{okText}{/if}
+      </button>
     </footer>
   </div>
 </div>

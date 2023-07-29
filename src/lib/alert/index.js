@@ -1,5 +1,6 @@
 import Alert from './index.svelte'
 import { injectStyle } from '../../plugin/style.js'
+import './btn.less'
 import './index.less'
 import '../style/icon.less'
 import '../style/animation.less'

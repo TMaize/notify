@@ -10,9 +10,9 @@ A frame less notify component，[watch demo](https://tmaize.github.io/notify/)
 
 | lib            | size     | gzip    | CDN                                                                                        |
 | -------------- | -------- | ------- | ------------------------------------------------------------------------------------------ |
-| all.umd.js     | 17.35 kB | 6.34 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.2.0/files/dist/all.umd.js)     |
-| alert.umd.js   | 14.25 kB | 5.40 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.2.0/files/dist/alert.umd.js)   |
-| message.umd.js | 10.19 kB | 3.81 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.2.0/files/dist/message.umd.js) |
+| all.umd.js     | 14.56 kB | 5.43 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.2.0/files/dist/all.umd.js)     |
+| alert.umd.js   | 11.50 kB | 4.49 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.2.0/files/dist/alert.umd.js)   |
+| message.umd.js | 9.74 kB  | 3.77 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.2.0/files/dist/message.umd.js) |
 
 ```html
 <script src="all.umd.js"></script>

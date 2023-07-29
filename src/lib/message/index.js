@@ -60,8 +60,6 @@ message.error = content => message({ content, type: 'error' })
 
 message.info = content => message({ content, type: 'info' })
 
-message.normal = content => message({ content, type: 'normal' })
-
 message.loading = content => message({ content, type: 'loading' })
 
 message.clear = id => {

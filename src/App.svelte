@@ -13,7 +13,6 @@
     <button on:click={() => notify.message.warning(messageText)}>message.warning</button>
     <button on:click={() => notify.message.error(messageText)}>message.error</button>
     <button on:click={() => notify.message.info(messageText)}>message.info</button>
-    <button on:click={() => notify.message.normal(messageText)}>message.normal</button>
     <button on:click={() => notify.message.loading(messageText)}>message.loading</button>
     <div style="height: 10px;" />
     <button on:click={() => notify.message.clear()}>message.clear</button>

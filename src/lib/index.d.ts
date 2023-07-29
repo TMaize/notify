@@ -5,7 +5,7 @@ interface AlertController {
 interface AlertOption {
   title?: string;
   content: string;
-  type?: 'success' | 'warning' | 'error' | 'info' | 'normal';
+  type?: 'success' | 'warning' | 'error' | 'info';
   okText?: string;
   cancelText?: string;
   closeOnClickOverlay?: boolean;
@@ -17,7 +17,7 @@ export declare function alert(content: string | AlertOption): Promise<string>;
 interface MessageOption {
   content: string;
   duration?: number;
-  type?: 'success' | 'warning' | 'error' | 'info' | 'normal' | 'loading';
+  type?: 'success' | 'warning' | 'error' | 'info' | 'loading';
 }
 
 export const message: {
@@ -26,7 +26,6 @@ export const message: {
   warning(content: string): number;
   error(content: string): number;
   info(content: string): number;
-  normal(content: string): number;
   loading(content: string): number;
   clear(id?: number): void;
 }
