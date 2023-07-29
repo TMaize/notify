@@ -30,13 +30,43 @@ function alert(content) {
     props.closeOnClickOverlay = content.closeOnClickOverlay
   }
 
-  return new Promise((resolve, reject) => {
-    const app = new Alert({
-      target: document.body,
-      props: props
+  const app = new Alert({
+    target: document.body,
+    props: props
+  })
+
+  /**
+   * @type {import('../index.d').AlertController}
+   */
+  const controller = {
+    showLoading() {
+      app.$set({ loading: true })
+    }
+  }
+
+  return new Promise(function (resolve, reject) {
+    app.$on('ok', () => {
+      function done() {
+        resolve('ok')
+        app.$destroy()
+      }
+      if (content.beforeClose) {
+        content.beforeClose('ok', controller, done)
+        return
+      }
+      done()
     })
-    app.$on('ok', () => resolve('ok'))
-    app.$on('cancel', () => resolve('cancel'))
+    app.$on('cancel', function () {
+      function done() {
+        resolve('cancel')
+        app.$destroy()
+      }
+      if (content.beforeClose) {
+        content.beforeClose('cancel', controller, done)
+        return
+      }
+      done()
+    })
   })
 }
 

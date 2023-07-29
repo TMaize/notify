@@ -30,7 +30,23 @@
       example 1
     </button>
 
-    <button on:click={() => notify.alert({ title: '销毁确认', content: '你是否要销毁该仓库，此操作会立即生效，请谨慎操作！', type: 'error' })}>
+    <button
+      on:click={async () => {
+        const type = await notify.alert({
+          title: '销毁确认',
+          content: '你是否要销毁该仓库，此操作会立即生效，请谨慎操作！',
+          type: 'error',
+          beforeClose(action, controller, done) {
+            if (action !== 'ok') {
+              return done()
+            }
+            controller.showLoading()
+            setTimeout(done, 2000)
+          }
+        })
+        notify.message(type)
+      }}
+    >
       example 2
     </button>
   </div>

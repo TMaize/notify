@@ -1,10 +1,15 @@
+interface AlertController {
+  showLoading: () => void;
+}
+
 interface AlertOption {
-  title?: string,
+  title?: string;
   content: string;
-  type?: 'success' | 'warning' | 'error' | 'info' | 'normal',
-  okText?: string,
-  cancelText?: string
-  closeOnClickOverlay?: boolean
+  type?: 'success' | 'warning' | 'error' | 'info' | 'normal';
+  okText?: string;
+  cancelText?: string;
+  closeOnClickOverlay?: boolean;
+  beforeClose?: (action: string, controller: AlertController, done: () => void) => void;
 }
 
 export declare function alert(content: string | AlertOption): Promise<string>;
@@ -23,5 +28,5 @@ export const message: {
   info(content: string): number;
   normal(content: string): number;
   loading(content: string): number;
-  clear(id?: number): void
+  clear(id?: number): void;
 }

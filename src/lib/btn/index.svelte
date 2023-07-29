@@ -15,9 +15,5 @@
 </script>
 
 <button class="n-btn {type ? `n-btn-${type}` : ''}" on:click={click}>
-  {#if loading}
-    <span class="n-icon n-icon-loading" />
-  {:else}
-    <slot />
-  {/if}
+  {#if loading}<span class="n-icon n-icon-loading" />{:else}<slot />{/if}
 </button>

@@ -1,6 +1,5 @@
 <script>
   import { onMount, createEventDispatcher } from 'svelte'
-  import { get_current_component } from 'svelte/internal'
   import Btn from '../btn/index.js'
 
   export let title = '提示'
@@ -9,6 +8,7 @@
   export let okText = '确定'
   export let cancelText = '取消'
   export let closeOnClickOverlay = false
+  export let loading = false
 
   let el = null
   onMount(() => {
@@ -16,7 +16,7 @@
   })
 
   const dispatch = createEventDispatcher()
-  const self = get_current_component()
+  // const self = get_current_component()
 
   function handleKeyDown(e) {
     if (e.key == 'Escape') {
@@ -28,17 +28,15 @@
    * close alter
    * @param {string} type
    */
-  export function cancel(type) {
+  function cancel(type) {
     if ((type === 'overlay' || type === 'Escape') && closeOnClickOverlay !== true) {
       return
     }
     dispatch('cancel')
-    self.$destroy()
   }
 
-  export function ok() {
+  function ok() {
     dispatch('ok')
-    self.$destroy()
   }
 </script>
 
@@ -55,7 +53,7 @@
       {#if cancelText !== ''}
         <Btn on:click={() => cancel('button')}>{cancelText}</Btn>
       {/if}
-      <Btn on:click={() => ok()} {type}>{okText}</Btn>
+      <Btn on:click={() => ok()} {type} {loading}>{okText}</Btn>
     </footer>
   </div>
 </div>
