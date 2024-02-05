@@ -1,5 +1,4 @@
 import Message from './index.svelte'
-import { injectStyle } from '../../plugin/style.js'
 import './index.less'
 import '../style/icon.less'
 import '../style/animation.less'
@@ -12,8 +11,6 @@ const instance = {}
  * @returns {number}
  */
 function message(content) {
-  injectStyle()
-
   /**
    * @type {import('../index.d').MessageOption}
    */

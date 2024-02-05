@@ -1,5 +1,4 @@
 import Alert from './index.svelte'
-import { injectStyle } from '../../plugin/style.js'
 import './btn.less'
 import './index.less'
 import '../style/icon.less'
@@ -11,7 +10,6 @@ import '../style/animation.less'
  * @returns {Promise<string>}
  */
 function alert(content) {
-  injectStyle()
 
   /**
    * @type {import('../index.d').AlertOption}

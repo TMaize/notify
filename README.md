@@ -8,11 +8,11 @@ A frame less notify component，[watch demo](https://tmaize.github.io/notify/)
 
 ### CDN usage
 
-| lib            | size     | gzip    | CDN                                                                                        |
-| -------------- | -------- | ------- | ------------------------------------------------------------------------------------------ |
-| all.umd.js     | 14.56 kB | 5.43 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.3.0/files/dist/all.umd.js)     |
-| alert.umd.js   | 11.50 kB | 4.49 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.3.0/files/dist/alert.umd.js)   |
-| message.umd.js | 9.74 kB  | 3.77 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.3.0/files/dist/message.umd.js) |
+| lib             | size     | gzip    | CDN                                                                                         |
+| --------------- | -------- | ------- | ------------------------------------------------------------------------------------------- |
+| all.iife.js     | 14.33 kB | 5.35 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.4.0/files/dist/all.iife.js)     |
+| alert.iife.js   | 11.27 kB | 4.42 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.4.0/files/dist/alert.iife.js)   |
+| message.iife.js | 9.51 kB  | 3.70 kB | [npmmirror](https://registry.npmmirror.com/@tmaize/notify/0.4.0/files/dist/message.iife.js) |
 
 ```html
 <script src="all.umd.js"></script>
@@ -28,7 +28,7 @@ yarn add @tmaize/notify
 ```
 
 ```js
-import { alert, message } from '@test/demo'
+import { alert, message } from '@tmaize/notify'
 
 alert('hello')
 

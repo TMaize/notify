@@ -1,8 +1,7 @@
 {
   "name": "@tmaize/notify",
   "version": "0.0.0",
-  "type": "module",
-  "main": "dist/all.umd.js",
+  "main": "dist/all.cjs.js",
   "module": "dist/all.es.js",
   "types": "src/lib/index.d.ts",
   "author": "TMaize <1772314831@qq.com>",
@@ -10,7 +9,7 @@
   "repository": "https://github.com/TMaize/notify.git",
   "exports": {
     ".": {
-      "require": "./dist/all.umd.js",
+      "require": "./dist/all.cjs.js",
       "import": "./dist/all.es.js"
     }
   },
@@ -18,7 +17,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:icon": "svg-css-icon --encode utf8 --input src/lib/style --output src/lib/style/icon.less --class n-icon",
-    "build:lib": "npm run build:icon && node build.js",
+    "build:lib": "npm run build:icon && node build.mjs",
     "preview": "vite preview",
     "prepublishOnly": "npm run build:lib"
   },
@@ -34,5 +33,8 @@
     "dist",
     "src/lib/index.d.ts",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "vite-plugin-css-injected-by-js": "^3.4.0"
+  }
 }
